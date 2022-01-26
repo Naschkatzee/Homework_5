@@ -25,7 +25,7 @@ class Line:
         x2 = self.end.x
         y1 = self.start.y
         y2 = self.end.y
-        return ((((x2 - x1)**2) + ((y2 - y1)**2))**0.5)
+        return ((x2 - x1)**2) + ((y2 - y1)**2)**0.5
 
     @property
     def length (self):
@@ -75,6 +75,3 @@ obj1.s
 volume = line.length ** 3
 obj2 = Cube (volume)
 obj2.__init__
-
-
-
