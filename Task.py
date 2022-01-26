@@ -33,7 +33,7 @@ class Line:
 
 
 class Rect (Shape):
-    def __init__ (self, side_a: Line, side_b: Line):
+    def rect (self, side_a: Line, side_b: Line):
         self.side_a = side_a
         self.side_b = side_b
         self.area = side_a * side_b
