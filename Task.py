@@ -33,22 +33,20 @@ class Line:
 
 
 class Rect (Shape):
-    def rect (self, side_a: Line, side_b: Line):
+    def __init__ (self, side_a: Line, side_b: Line):
         self.side_a = side_a
         self.side_b = side_b
         self.area = side_a * side_b
-        self.perimeter = side_a **2 + side_b ** 2
+        self.perimeter = side_a * 2 + side_b * 2
 
     @property
     def s (self):
         print (f'The area of the rectangle is {self.area} and the perimeter is {self.perimeter}')
 
 class Square (Shape, Line):
-    def four (self):
-        self.line.length = side_a
-        self.line.length = side_b
+    def __init__(self):
         self.area = side_a * side_b
-        self.perimeter = side_a **2 + side_b ** 2
+        self.perimeter = side_a ** 2 + side_b ** 2
         
     @property 
     def s (self):
@@ -70,7 +68,7 @@ side_a = line.length
 side_b = line.length
 obj = Rect (side_a, side_b)
 obj.s
-obj1 = Square (side_a, side_b)
+obj1 = Square ()
 obj1.s
 volume = line.length ** 3
 obj2 = Cube (volume)
